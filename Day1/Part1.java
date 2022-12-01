@@ -6,7 +6,7 @@ public class Part1 {
     public static void main(String[] args) {
         ArrayList<Integer> calories = new ArrayList<>(100);
         readFile("input.txt", calories);
-        System.out.println(calories);
+        System.out.println(mostCalories(calories));
     }
     public static void readFile(String filename, ArrayList<Integer> list){
         File file = new File(filename);
@@ -27,5 +27,21 @@ public class Part1 {
             System.out.println("File not found");
             System.exit(0);
         }
+    }
+    public static int mostCalories(ArrayList<Integer> list){
+        int sum = 0;
+        int maxSum = 0;
+        for(int num : list){
+            if(num == -1){
+                if (sum > maxSum){
+                    maxSum = sum;
+                }
+                sum = 0;
+            }
+            else{
+                sum += num;
+            }
+        }
+        return maxSum;
     }
 }
