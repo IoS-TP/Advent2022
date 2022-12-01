@@ -6,6 +6,7 @@ public class Part1 {
     public static void main(String[] args) {
         ArrayList<Integer> calories = new ArrayList<>(100);
         readFile("input.txt", calories);
+        System.out.println(calories);
     }
     public static void readFile(String filename, ArrayList<Integer> list){
         File file = new File(filename);
@@ -14,7 +15,10 @@ public class Part1 {
             while (reader.hasNextLine()){
                 String num = reader.nextLine();
                 if (num.equals("")){
-                    System.out.println("hi");
+                    list.add(-1);
+                }
+                else{
+                    list.add(Integer.parseInt(num));
                 }
 
             }
