@@ -10,6 +10,7 @@ public class Part1 {
         for (String line : inputs){
             addScore(line);
         }
+        System.out.println(count);
     }
     public static void readInfo(String filename, ArrayList<String> list){
         File file = new File(filename);
@@ -28,29 +29,31 @@ public class Part1 {
         String a = "" + line.charAt(0);
         String b = "" + line.charAt(2);
         if (b.equals("X")){
+            
             count++;
-            if(a.equals("X")){
+            if(a.equals("A")){
                 count += 3;
             }
-            else if (a.equals("Z")){
+            else if (a.equals("C")){
                 count +=6;
             }
         }
         else if (b.equals("Y")){
+            
             count+=2;
-            if(a.equals("X")){
+            if(a.equals("A")){
                 count += 6;
             }
-            else if (a.equals("Y")){
+            else if (a.equals("B")){
                 count +=3;
             }
         }
         else{
             count +=3;
-            if(a.equals("Y")){
+            if(a.equals("B")){
                 count += 6;
             }
-            else if (a.equals("Z")){
+            else if (a.equals("C")){
                 count +=3;
             }
         }
