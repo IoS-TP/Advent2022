@@ -4,10 +4,7 @@ import java.util.Scanner;
 public class Part1 {
     public static void main(String[] args){
         String word = readFile();
-        //System.out.println(word);
         System.out.println(findBreak(word));
-        
-        
     }
     public static String readFile(){
         File file = new File("input.txt");
