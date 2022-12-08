@@ -16,6 +16,7 @@ public class Part1 {
         System.out.println(folders);
         //System.out.println("PRev of e");
         //System.out.println(folders.getPrevLoc(folders, "e"));
+        System.out.println(folders.summing());
     }
     public static void readFile(ArrayList<String> list){
         File file = new File("input.txt");
